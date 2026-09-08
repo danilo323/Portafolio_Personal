@@ -71,6 +71,28 @@
   --shadow-lg: 0 16px 40px rgb(15 23 42 / 0.16);
 
   
+  --color-tech-html: #e34f26;
+  --color-tech-css: #1572b6;
+  --color-tech-js: #ca9a00;
+  --color-tech-react: #0891b2;
+  --color-tech-ts: #3178c6;
+  --color-tech-python: #3776ab;
+  --color-tech-django: #0c9d58;
+  --color-tech-nest: #e0234e;
+  --color-tech-postgres: #336791;
+  --color-tech-mysql: #d97706;
+  --color-tech-mssql: #a4373a;
+  --color-tech-sklearn: #f7931e;
+  --color-tech-pandas: #8b5cf6;
+  --color-tech-nlp: #0d9488;
+  --color-tech-git: #f05033;
+  --color-tech-colab: #e8a400;
+  --color-tech-vscode: #007acc;
+  --color-tech-github: #24292e;
+  --color-tech-linkedin: #0a66c2;
+  --color-tech-mail: #ea4335;
+  --color-tech-place: #ef4444;
+
   --container-max: 1120px;
   --header-height: 4rem;
   --measure: 68ch;
@@ -98,6 +120,17 @@
   --color-text: #e2e8f0;
   --color-text-muted: #94a3b8;
   --color-text-inverse: #0b1120;
+
+  --color-tech-python: #6ea8dc;
+  --color-tech-postgres: #7aa8d8;
+  --color-tech-css: #4a9fe0;
+  --color-tech-ts: #6ba3e0;
+  --color-tech-mssql: #e08a8c;
+  --color-tech-vscode: #3ca9e8;
+  --color-tech-github: #f0f6fc;
+  --color-tech-linkedin: #4a9de8;
+  --color-tech-django: #22c07a;
+  --color-tech-js: #eab308;
 
   --shadow-sm: 0 1px 3px rgb(0 0 0 / 0.5);
   --shadow-card: 0 4px 12px rgb(0 0 0 / 0.55);
@@ -1333,9 +1366,6 @@ figure { margin: 0; }
 
 .bi { line-height: 1; }
 
-.skill-card__icon .bi,
-.contact__item-icon .bi,
-.skills__group-title .bi { color: var(--color-primary); }
 
 .field__required {
   font-size: 0.5em;
@@ -1354,3 +1384,55 @@ figure { margin: 0; }
 .type-demo--h1 { font-size: var(--text-4xl); }
 .type-demo--h2 { font-size: var(--text-3xl); }
 .type-demo--h3 { font-size: var(--text-xl); }
+
+.icon--html { --icon-color: var(--color-tech-html); }
+.icon--css { --icon-color: var(--color-tech-css); }
+.icon--js { --icon-color: var(--color-tech-js); }
+.icon--react { --icon-color: var(--color-tech-react); }
+.icon--ts { --icon-color: var(--color-tech-ts); }
+.icon--python { --icon-color: var(--color-tech-python); }
+.icon--django { --icon-color: var(--color-tech-django); }
+.icon--nest { --icon-color: var(--color-tech-nest); }
+.icon--postgres { --icon-color: var(--color-tech-postgres); }
+.icon--mysql { --icon-color: var(--color-tech-mysql); }
+.icon--mssql { --icon-color: var(--color-tech-mssql); }
+.icon--sklearn { --icon-color: var(--color-tech-sklearn); }
+.icon--pandas { --icon-color: var(--color-tech-pandas); }
+.icon--nlp { --icon-color: var(--color-tech-nlp); }
+.icon--git { --icon-color: var(--color-tech-git); }
+.icon--colab { --icon-color: var(--color-tech-colab); }
+.icon--vscode { --icon-color: var(--color-tech-vscode); }
+.icon--github { --icon-color: var(--color-tech-github); }
+.icon--linkedin { --icon-color: var(--color-tech-linkedin); }
+.icon--mail { --icon-color: var(--color-tech-mail); }
+.icon--place { --icon-color: var(--color-tech-place); }
+.icon--frontend { --icon-color: var(--color-tech-html); }
+.icon--backend { --icon-color: var(--color-tech-django); }
+.icon--db { --icon-color: var(--color-tech-postgres); }
+.icon--ia { --icon-color: var(--color-tech-pandas); }
+.icon--tools { --icon-color: var(--color-tech-colab); }
+
+.skill-card__icon {
+  color: var(--icon-color, var(--color-primary));
+  background-color: color-mix(in srgb, var(--icon-color, var(--color-primary)) 14%, transparent);
+}
+
+.skill-card:hover { border-color: var(--icon-color, var(--color-primary)); }
+
+.skills__group-title .bi,
+.contact__item-icon,
+.contact__item-icon .bi {
+  color: var(--icon-color, var(--color-primary));
+}
+
+.contact__item:hover { border-color: var(--icon-color, var(--color-primary)); }
+
+.tech-swatch__sample {
+  display: grid;
+  place-items: center;
+  height: 5rem;
+  font-size: var(--text-2xl);
+  color: var(--icon-color);
+  background-color: color-mix(in srgb, var(--icon-color) 14%, transparent);
+  border-bottom: var(--border-width) solid var(--color-border);
+}

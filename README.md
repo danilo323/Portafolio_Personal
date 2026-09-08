@@ -30,7 +30,8 @@ decisiones visuales del sitio.
 - **CSS3** — Custom Properties (design tokens), Flexbox, CSS Grid, media queries,
   `clamp()`, `color-mix()` y `aspect-ratio`.
 - **JavaScript (ES6, vanilla)** — sin frameworks.
-- **Bootstrap Icons** — iconografía vectorial cargada desde CDN (`bi bi-*`).
+- **Bootstrap Icons 1.11.3** — iconografía vectorial incluida en el repositorio
+  (`assets/vendor/`), sin depender de un CDN. Cada tecnología usa su color de marca.
 - **SVG** — avatar, favicon y capturas de los proyectos (vectoriales y ligeros).
 - **Git y GitHub Pages** — control de versiones y despliegue.
 
@@ -83,7 +84,8 @@ El tema oscuro **no duplica reglas**: sólo redefine el valor de esos mismos tok
 
 La página [`design-system.html`](design-system.html) documenta:
 
-- **Colores** — marca, superficies, texto y estados, cada uno con su token y su valor.
+- **Colores** — marca, superficies, texto, estados y el color de marca de cada tecnología,
+  cada uno con su token y su valor.
 - **Tipografía** — ejemplos reales de `h1`, `h2`, `h3`, párrafo, texto secundario y enlaces.
 - **Espaciado** — la escala de siete pasos (`--space-2xs` … `--space-2xl`) representada visualmente.
 - **Bordes, radios y sombras** — los tres niveles de redondeo y de elevación.
@@ -121,6 +123,8 @@ horizontal en ningún ancho.
 ├── js/
 │   └── main.js             # Todas las funcionalidades interactivas
 ├── assets/
+│   ├── vendor/
+│   │   └── bootstrap-icons/   # Iconos locales (CSS + fuentes woff/woff2)
 │   └── img/
 │       ├── avatar.svg
 │       ├── favicon.svg
