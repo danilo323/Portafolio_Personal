@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img"
+     aria-label="Calendario del optimizador de horarios estudiantiles">
+  <rect width="640" height="400" fill="#ffffff"/>
+  <rect x="0" y="0" width="640" height="48" fill="#7c3aed"/>
+  <text x="24" y="30" font-family="Segoe UI, Arial" font-size="15" font-weight="700" fill="#ffffff">Smart Schedule Optimizer</text>
+  <text x="470" y="30" font-family="Segoe UI, Arial" font-size="12" fill="#ede9fe">score: 0.91</text>
+  <g font-family="Segoe UI, Arial" font-size="11" fill="#64748b">
+    <text x="30" y="80">LUN</text><text x="140" y="80">MAR</text><text x="250" y="80">MIÉ</text>
+    <text x="360" y="80">JUE</text><text x="470" y="80">VIE</text>
+  </g>
+  <g>
+    <rect x="24" y="92" width="96" height="70" rx="8" fill="#dbeafe"/>
+    <text x="36" y="118" font-family="Segoe UI, Arial" font-size="11" fill="#1d4ed8">Cálculo</text>
+    <text x="36" y="136" font-family="Segoe UI, Arial" font-size="10" fill="#2563eb">07:00 · alta</text>
+
+    <rect x="134" y="92" width="96" height="70" rx="8" fill="#ede9fe"/>
+    <text x="146" y="118" font-family="Segoe UI, Arial" font-size="11" fill="#6d28d9">Proyecto</text>
+    <text x="146" y="136" font-family="Segoe UI, Arial" font-size="10" fill="#7c3aed">09:00 · media</text>
+
+    <rect x="244" y="92" width="96" height="70" rx="8" fill="#ccfbf1"/>
+    <text x="256" y="118" font-family="Segoe UI, Arial" font-size="11" fill="#0f766e">Lectura</text>
+    <text x="256" y="136" font-family="Segoe UI, Arial" font-size="10" fill="#0d9488">15:00 · baja</text>
+
+    <rect x="354" y="92" width="96" height="70" rx="8" fill="#fee2e2"/>
+    <text x="366" y="118" font-family="Segoe UI, Arial" font-size="11" fill="#b91c1c">Conflicto</text>
+    <text x="366" y="136" font-family="Segoe UI, Arial" font-size="10" fill="#dc2626">10:00 · urgente</text>
+
+    <rect x="464" y="92" width="96" height="70" rx="8" fill="#dbeafe"/>
+    <text x="476" y="118" font-family="Segoe UI, Arial" font-size="11" fill="#1d4ed8">Examen</text>
+    <text x="476" y="136" font-family="Segoe UI, Arial" font-size="10" fill="#2563eb">08:00 · alta</text>
+  </g>
+  <rect x="24" y="190" width="592" height="60" rx="10" fill="#fef3c7"/>
+  <text x="44" y="216" font-family="Segoe UI, Arial" font-size="12" font-weight="700" fill="#92400e">Conflicto detectado el jueves 10:00</text>
+  <text x="44" y="236" font-family="Segoe UI, Arial" font-size="11" fill="#a16207">Sugerencia del modelo: mover a las 16:30 (ventana vespertina disponible)</text>
+  <rect x="24" y="272" width="592" height="104" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="44" y="300" font-family="Segoe UI, Arial" font-size="11" fill="#64748b">IMPORTANCIA DE VARIABLES · Gradient Boosting</text>
+  <rect x="44" y="312" width="300" height="10" rx="5" fill="#7c3aed"/>
+  <rect x="44" y="332" width="220" height="10" rx="5" fill="#7c3aed" opacity="0.7"/>
+  <rect x="44" y="352" width="130" height="10" rx="5" fill="#7c3aed" opacity="0.45"/>
+</svg>

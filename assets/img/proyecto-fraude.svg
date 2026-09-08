@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img"
+     aria-label="Panel de puntaje de riesgo de fraude">
+  <rect width="640" height="400" fill="#0f172a"/>
+  <rect x="0" y="0" width="640" height="48" fill="#1e293b"/>
+  <circle cx="24" cy="24" r="6" fill="#ef4444"/><circle cx="44" cy="24" r="6" fill="#f59e0b"/>
+  <circle cx="64" cy="24" r="6" fill="#22c55e"/>
+  <text x="96" y="30" font-family="Segoe UI, Arial" font-size="14" fill="#94a3b8">Detector de Fraudes · Siniestros</text>
+  <rect x="24" y="72" width="280" height="120" rx="12" fill="#1e293b"/>
+  <text x="44" y="102" font-family="Segoe UI, Arial" font-size="12" fill="#94a3b8">PUNTAJE DE RIESGO</text>
+  <text x="44" y="146" font-family="Segoe UI, Arial" font-size="40" font-weight="700" fill="#ef4444">87 / 100</text>
+  <rect x="44" y="160" width="240" height="10" rx="5" fill="#334155"/>
+  <rect x="44" y="160" width="209" height="10" rx="5" fill="#ef4444"/>
+  <text x="44" y="184" font-family="Segoe UI, Arial" font-size="12" fill="#fca5a5">Nivel: CRÍTICO</text>
+  <rect x="328" y="72" width="288" height="120" rx="12" fill="#1e293b"/>
+  <text x="348" y="102" font-family="Segoe UI, Arial" font-size="12" fill="#94a3b8">SIMILITUD DE NARRATIVAS (NLP)</text>
+  <rect x="348" y="118" width="180" height="8" rx="4" fill="#7c3aed"/>
+  <rect x="348" y="138" width="140" height="8" rx="4" fill="#7c3aed" opacity="0.7"/>
+  <rect x="348" y="158" width="96" height="8" rx="4" fill="#7c3aed" opacity="0.45"/>
+  <rect x="24" y="216" width="592" height="160" rx="12" fill="#1e293b"/>
+  <text x="44" y="246" font-family="Segoe UI, Arial" font-size="12" fill="#94a3b8">EXPLICACIÓN DEL AGENTE</text>
+  <rect x="44" y="262" width="520" height="9" rx="4" fill="#475569"/>
+  <rect x="44" y="284" width="480" height="9" rx="4" fill="#475569"/>
+  <rect x="44" y="306" width="540" height="9" rx="4" fill="#475569"/>
+  <rect x="44" y="328" width="300" height="9" rx="4" fill="#475569"/>
+  <rect x="44" y="350" width="88" height="16" rx="8" fill="#2563eb"/>
+</svg>
