@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Design System del portafolio de Oswaldo Angulo: paleta de colores, tipografía, escala de espaciado y componentes reutilizables documentados.">
+  <meta name="author" content="Oswaldo Danilo Angulo Tamayo">
+  <meta name="theme-color" content="#2563eb">
+  <title>Design System · Portafolio de Oswaldo Angulo</title>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <header class="header">
+    <div class="container">
+      <nav class="navbar" aria-label="Navegación principal">
+        <a class="navbar__brand" href="index.html">
+          <span class="navbar__brand-mark" aria-hidden="true">OA</span>
+          <span>Oswaldo Angulo</span>
+        </a>
+
+        <ul class="navbar__menu" id="nav-menu">
+          <li><a class="navbar__link" href="index.html#inicio">Inicio</a></li>
+          <li><a class="navbar__link" href="index.html#sobre-mi">Sobre mí</a></li>
+          <li><a class="navbar__link" href="index.html#habilidades">Habilidades</a></li>
+          <li><a class="navbar__link" href="index.html#proyectos">Proyectos</a></li>
+          <li><a class="navbar__link is-active" href="design-system.html" aria-current="page">Design System</a></li>
+          <li><a class="navbar__link" href="index.html#contacto">Contacto</a></li>
+        </ul>
+
+        <div class="navbar__actions">
+          <button class="icon-button" id="theme-toggle" type="button"
+                  aria-label="Cambiar entre tema claro y oscuro" aria-pressed="false">
+            <i class="bi bi-moon-stars" id="theme-icon" aria-hidden="true"></i>
+          </button>
+          <button class="icon-button navbar__toggle" id="nav-toggle" type="button"
+                  aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav-menu">
+            <span aria-hidden="true"><i class="bi bi-list" aria-hidden="true"></i></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <section class="ds-header">
+      <div class="container">
+        <p class="section__eyebrow">Documentación</p>
+        <h1>Design System</h1>
+        <p class="hero__lead">
+          Las decisiones visuales del portafolio están centralizadas en
+          <strong>CSS Custom Properties</strong> declaradas en <code>:root</code>. Cada componente
+          de esta página es exactamente el mismo que se usa en el sitio: comparten clases y tokens,
+          no son copias.
+        </p>
+        <p>
+          <a class="btn btn--secondary" href="index.html"><i class="bi bi-arrow-left" aria-hidden="true"></i> Volver al portafolio</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="colores">
+      <div class="container">
+        <article class="ds-block">
+          <h2 class="ds-block__title">1. Colores</h2>
+          <p class="ds-block__intro">
+            La paleta se define una sola vez y se reutiliza mediante variables. Al activar el tema
+            oscuro con el botón de la barra superior, los mismos tokens cambian de valor y toda la
+            página se adapta sin duplicar reglas.
+          </p>
+
+          <h3 class="ds-subtitle">Colores de marca</h3>
+          <ul class="swatch-grid">
+            <li class="swatch">
+              <div class="swatch__sample" style="background-color: var(--color-primary)"></div>
+              <div class="swatch__info">
+                <span class="swatch__name">Primary</span>
+                <code class="swatch__token">--color-primary</code>
+                <code class="swatch__value">#2563eb</code>
+              </div>
+            </li>
+            <li class="swatch">
+              <div class="swatch__sample" style="background-color: var(--color-secondary)"></div>
+              <div class="swatch__info">
+                <span class="swatch__name">Secondary</span>
+                <code class="swatch__token">--color-secondary</code>
+                <code class="swatch__value">#7c3aed</code>
+              </div>
+            </li>
+            <li class="swatch">
+              <div class="swatch__sample" style="background-color: var(--color-accent)"></div>
+              <div class="swatch__info">
+                <span class="swatch__name">Accent</span>
+                <code class="swatch__token">--color-accent</code>
+                <code class="swatch__value">#0d9488</code>
+              </div>
+            </li>
+            <li class="swatch">
+              <div class="swatch__sample" style="background: var(--gradient-brand)"></div>
+              <div class="swatch__info">
+                <span class="swatch__name">Gradiente de marca</span>
+                <code class="swatch__token">--gradient-brand</code>
+                <code class="swatch__value">primary → secondary</code>
+              </div>
+            </li>
+          </ul>
+
+          <h3 class="ds-subtitle">Superficies</h3>
+          <ul class="swatch-grid">
+            <li class="swatch">
+              <div class="swatch__sample" style="background-color: var(--color-background)"></div>
+              <div class="swatch__info">
+                <span class="swatch__name">Background</span>
+                <code class="swatch__token">--color-background</code>
+                <code class="swatch__value">#ffffff</code>
+              </div>
+            </li>
+            <li class="swatch">
+              <div class="swatch__sample" style="background-color: var(--color-surface)"></div>
+              <div class="swatch__info">
+                <span class="swatch__name">Surface</span>
+                <code class="swatch__token">--color-surface</code>
+                <code class="swatch__value">#f8fafc</code>
+              </div>
+            </li>
+            <li class="swatch">
+              <div class="swatch__sample" style="background-color: var(--color-surface-alt)"></div>
+              <div class="swatch__info">
+                <span class="swatch__name">Surface alt</span>
+                <code class="swatch__token">--color-surface-alt</code>
+                <code class="swatch__value">#f1f5f9</code>
+              </div>
+            </li>
+            <li class="swatch">
+              <div class="swatch__sample" style="background-color: var(--color-border)"></div>
+              <div class="swatch__info">
+                <span class="swatch__name">Border</span>
+                <code class="swatch__token">--color-border</code>
+                <code class="swatch__value">#e2e8f0</code>
+              </div>
+            </li>
+          </ul>
+
+          <h3 class="ds-subtitle">Texto y estados</h3>
+          <ul class="swatch-grid">
+            <li class="swatch">
+              <div class="swatch__sample" style="background-color: var(--color-text)"></div>
+              <div class="swatch__info">
+                <span class="swatch__name">Text</span>
+                <code class="swatch__token">--color-text</code>
+                <code class="swatch__value">#0f172a</code>
+              </div>
+            </li>
+            <li class="swatch">
+              <div class="swatch__sample" style="background-color: var(--color-text-muted)"></div>
+              <div class="swatch__info">
+                <span class="swatch__name">Text muted</span>
+                <code class="swatch__token">--color-text-muted</code>
+                <code class="swatch__value">#64748b</code>
+              </div>
+            </li>
+            <li class="swatch">
+              <div class="swatch__sample" style="background-color: var(--color-success)"></div>
+              <div class="swatch__info">
+                <span class="swatch__name">Success</span>
+                <code class="swatch__token">--color-success</code>
+                <code class="swatch__value">#16a34a</code>
+              </div>
+            </li>
+            <li class="swatch">
+              <div class="swatch__sample" style="background-color: var(--color-warning)"></div>
+              <div class="swatch__info">
+                <span class="swatch__name">Warning</span>
+                <code class="swatch__token">--color-warning</code>
+                <code class="swatch__value">#d97706</code>
+              </div>
+            </li>
+            <li class="swatch">
+              <div class="swatch__sample" style="background-color: var(--color-danger)"></div>
+              <div class="swatch__info">
+                <span class="swatch__name">Danger</span>
+                <code class="swatch__token">--color-danger</code>
+                <code class="swatch__value">#dc2626</code>
+              </div>
+            </li>
+          </ul>
+
+          <h3 class="ds-subtitle">Declaración en código</h3>
+          <pre class="code-block"><code>:root {
+  --color-primary: #2563eb;
+  --color-secondary: #7c3aed;
+  --color-background: #ffffff;
+  --color-surface: #f8fafc;
+  --color-text: #0f172a;
+  --color-text-muted: #64748b;
+}
+
+[data-theme="dark"] {
+  --color-background: #0b1120;
+  --color-surface: #111a2e;
+  --color-text: #e2e8f0;
+}</code></pre>
+        </article>
+
+        <article class="ds-block" id="tipografia">
+          <h2 class="ds-block__title">2. Tipografía</h2>
+          <p class="ds-block__intro">
+            Una sola familia tipográfica (<code>--font-primary</code>) para todo el contenido y una
+            monoespaciada (<code>--font-mono</code>) para código y tokens. Los tamaños salen de una
+            escala fija; el <code>h1</code> usa <code>clamp()</code> para adaptarse al ancho de pantalla.
+          </p>
+
+          <div class="type-sample">
+            <p class="type-sample__meta">h1 · --text-4xl · clamp(2.25rem, 6vw, 3.5rem) · 700</p>
+            <h1>Encabezado principal</h1>
+          </div>
+
+          <div class="type-sample">
+            <p class="type-sample__meta">h2 · --text-3xl · 2.25rem · 700</p>
+            <h2>Título de sección</h2>
+          </div>
+
+          <div class="type-sample">
+            <p class="type-sample__meta">h3 · --text-xl · 1.375rem · 700</p>
+            <h3>Subtítulo de bloque</h3>
+          </div>
+
+          <div class="type-sample">
+            <p class="type-sample__meta">p · --text-base · 1rem · line-height 1.65</p>
+            <p>
+              Párrafo estándar del sitio. La medida de línea está limitada a <code>68ch</code>
+              mediante la variable <code>--measure</code> para que el texto siga siendo cómodo de
+              leer incluso en pantallas anchas.
+            </p>
+          </div>
+
+          <div class="type-sample">
+            <p class="type-sample__meta">.text-muted · --text-base · --color-text-muted</p>
+            <p class="text-muted">
+              Texto secundario, usado para descripciones de apoyo y metadatos.
+            </p>
+          </div>
+
+          <div class="type-sample">
+            <p class="type-sample__meta">a · color --color-primary · hover --color-secondary</p>
+            <p><a href="index.html#proyectos">Este es un enlace de ejemplo</a> dentro de un párrafo.</p>
+          </div>
+
+          <div class="type-sample">
+            <p class="type-sample__meta">.section__eyebrow · --text-sm · mayúsculas · 600</p>
+            <p class="section__eyebrow">Etiqueta de sección</p>
+          </div>
+        </article>
+
+        <article class="ds-block" id="espaciado">
+          <h2 class="ds-block__title">3. Espaciado</h2>
+          <p class="ds-block__intro">
+            Escala basada en múltiplos de 4&nbsp;px expresada en <code>rem</code>. Todos los
+            márgenes, rellenos y separaciones del sitio usan alguno de estos siete valores.
+          </p>
+
+          <ul class="spacing-list">
+            <li class="spacing-row">
+              <code>--space-2xs</code><span>0.25rem</span>
+              <span class="spacing-row__bar" style="width: var(--space-2xs)"></span>
+            </li>
+            <li class="spacing-row">
+              <code>--space-xs</code><span>0.5rem</span>
+              <span class="spacing-row__bar" style="width: var(--space-xs)"></span>
+            </li>
+            <li class="spacing-row">
+              <code>--space-sm</code><span>0.75rem</span>
+              <span class="spacing-row__bar" style="width: var(--space-sm)"></span>
+            </li>
+            <li class="spacing-row">
+              <code>--space-md</code><span>1rem</span>
+              <span class="spacing-row__bar" style="width: var(--space-md)"></span>
+            </li>
+            <li class="spacing-row">
+              <code>--space-lg</code><span>2rem</span>
+              <span class="spacing-row__bar" style="width: var(--space-lg)"></span>
+            </li>
+            <li class="spacing-row">
+              <code>--space-xl</code><span>3rem</span>
+              <span class="spacing-row__bar" style="width: var(--space-xl)"></span>
+            </li>
+            <li class="spacing-row">
+              <code>--space-2xl</code><span>5rem</span>
+              <span class="spacing-row__bar" style="width: var(--space-2xl)"></span>
+            </li>
+          </ul>
+        </article>
+
+        <article class="ds-block" id="bordes">
+          <h2 class="ds-block__title">4. Bordes, radios y sombras</h2>
+          <p class="ds-block__intro">
+            Tres niveles de redondeo más una variante circular, y tres niveles de elevación que
+            distinguen contenido plano, tarjetas y capas flotantes como el modal.
+          </p>
+
+          <h3 class="ds-subtitle">Border radius</h3>
+          <ul class="token-grid">
+            <li>
+              <div class="token-demo token-demo--radius-sm"></div>
+              <code class="token-label">--radius-sm · 0.5rem</code>
+            </li>
+            <li>
+              <div class="token-demo token-demo--radius-md"></div>
+              <code class="token-label">--radius-md · 1rem</code>
+            </li>
+            <li>
+              <div class="token-demo token-demo--radius-lg"></div>
+              <code class="token-label">--radius-lg · 1.5rem</code>
+            </li>
+            <li>
+              <div class="token-demo token-demo--radius-full"></div>
+              <code class="token-label">--radius-full · 999px</code>
+            </li>
+          </ul>
+
+          <h3 class="ds-subtitle">Sombras</h3>
+          <ul class="token-grid">
+            <li>
+              <div class="token-demo token-demo--shadow-sm"></div>
+              <code class="token-label">--shadow-sm</code>
+            </li>
+            <li>
+              <div class="token-demo token-demo--shadow-card"></div>
+              <code class="token-label">--shadow-card</code>
+            </li>
+            <li>
+              <div class="token-demo token-demo--shadow-lg"></div>
+              <code class="token-label">--shadow-lg</code>
+            </li>
+          </ul>
+        </article>
+
+        <article class="ds-block" id="componentes">
+          <h2 class="ds-block__title">5. Componentes</h2>
+          <p class="ds-block__intro">
+            Cada componente listado abajo está en uso real dentro del portafolio. Son elementos
+            vivos: puedes escribir en los inputs, abrir el modal y ver el estado de error del formulario.
+          </p>
+
+          <h3 class="ds-subtitle">Botones</h3>
+          <div class="showcase">
+            <p class="showcase__caption">.btn--primary · .btn--secondary · .btn--ghost · .btn--sm · [disabled]</p>
+            <button class="btn btn--primary" type="button">Botón primario</button>
+            <button class="btn btn--secondary" type="button">Botón secundario</button>
+            <button class="btn btn--ghost" type="button">Botón fantasma</button>
+            <button class="btn btn--primary btn--sm" type="button">Primario pequeño</button>
+            <button class="btn btn--primary" type="button" disabled>Deshabilitado</button>
+          </div>
+
+          <h3 class="ds-subtitle">Badges y skills</h3>
+          <div class="showcase">
+            <p class="showcase__caption">.badge · .badge--primary · .badge--secondary</p>
+            <span class="badge">Neutro</span>
+            <span class="badge badge--primary">Python</span>
+            <span class="badge badge--primary">Django</span>
+            <span class="badge badge--secondary">Trabajo en equipo</span>
+          </div>
+
+          <h3 class="ds-subtitle">Skill card</h3>
+          <div class="showcase showcase--grid">
+            <p class="showcase__caption">.skill-card + .progress</p>
+            <article class="skill-card">
+              <p class="skill-card__icon" aria-hidden="true"><i class="bi bi-filetype-py" aria-hidden="true"></i></p>
+              <div class="skill-card__content">
+                <h4 class="skill-card__name">Python <span class="skill-card__level">Avanzado</span></h4>
+                <p class="skill-card__desc">Lógica de negocio, validaciones y scripts de datos.</p>
+                <div class="progress"><span class="progress__bar" data-level="88"></span></div>
+              </div>
+            </article>
+            <article class="skill-card">
+              <p class="skill-card__icon" aria-hidden="true"><i class="bi bi-server" aria-hidden="true"></i></p>
+              <div class="skill-card__content">
+                <h4 class="skill-card__name">Django <span class="skill-card__level">Intermedio-alto</span></h4>
+                <p class="skill-card__desc">Patrón MVT, ORM, validadores y formularios.</p>
+                <div class="progress"><span class="progress__bar" data-level="82"></span></div>
+              </div>
+            </article>
+          </div>
+
+          <h3 class="ds-subtitle">Card de proyecto</h3>
+          <div class="showcase showcase--grid">
+            <p class="showcase__caption">.card.project-card — idéntica a la usada en la sección Proyectos</p>
+            <article class="card project-card">
+              <figure class="project-card__figure">
+                <img class="project-card__image" src="assets/img/proyecto-ecuatrade.svg"
+                     alt="Captura del listado de inventario de EcuaTrade-System"
+                     width="640" height="400" loading="lazy">
+              </figure>
+              <div class="card__body">
+                <p class="project-card__meta">
+                  <span>Proyecto académico</span>
+                  <span>Abril 2026</span>
+                </p>
+                <h4 class="card__title">EcuaTrade-System</h4>
+                <p class="card__text">
+                  Plataforma Django para gestión de inventario con validación de cédulas ecuatorianas.
+                </p>
+                <ul class="badge-list">
+                  <li><span class="badge badge--primary">Django</span></li>
+                  <li><span class="badge badge--primary">Python</span></li>
+                </ul>
+                <div class="card__footer">
+                  <button class="btn btn--primary btn--sm" type="button" data-open-project="ecuatrade">
+                    Ver detalles
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <h3 class="ds-subtitle">Navbar</h3>
+          <div class="showcase">
+            <p class="showcase__caption">.navbar · .navbar__link · .navbar__link.is-active</p>
+            <nav class="navbar" aria-label="Ejemplo de barra de navegación">
+              <span class="navbar__brand">
+                <span class="navbar__brand-mark" aria-hidden="true">OA</span>
+                <span>Marca</span>
+              </span>
+              <ul class="navbar__menu">
+                <li><a class="navbar__link is-active" href="#componentes">Activo</a></li>
+                <li><a class="navbar__link" href="#componentes">Enlace</a></li>
+                <li><a class="navbar__link" href="#componentes">Enlace</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <h3 class="ds-subtitle">Campos de formulario</h3>
+          <form class="form" aria-label="Ejemplo de campos de formulario">
+            <p class="showcase__caption">.field · .input · .select · .textarea · estado .has-error</p>
+
+            <div class="form__row">
+              <div class="field">
+                <label class="field__label" for="ds-input">Input de texto</label>
+                <input class="input" type="text" id="ds-input" name="ds-input"
+                       placeholder="Escribe aquí…">
+              </div>
+
+              <div class="field has-error">
+                <label class="field__label" for="ds-input-error">
+                  Input con error <i class="bi bi-asterisk field__required" aria-hidden="true"></i>
+                </label>
+                <input class="input" type="email" id="ds-input-error" name="ds-input-error"
+                       value="correo-invalido" aria-invalid="true" aria-describedby="ds-error">
+                <p class="field__error" id="ds-error">Escribe un correo electrónico válido.</p>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="ds-select">Select</label>
+              <select class="select" id="ds-select" name="ds-select">
+                <option>Opción uno</option>
+                <option>Opción dos</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="ds-textarea">Textarea</label>
+              <textarea class="textarea" id="ds-textarea" name="ds-textarea" rows="4"
+                        placeholder="Mensaje de ejemplo…" aria-describedby="ds-hint"></textarea>
+              <p class="field__hint" id="ds-hint">Texto de ayuda con la clase .field__hint.</p>
+            </div>
+
+            <p class="form__status" data-state="success">Mensaje de éxito (.form__status[data-state="success"])</p>
+            <p class="form__status" data-state="error">Mensaje de error (.form__status[data-state="error"])</p>
+          </form>
+
+          <h3 class="ds-subtitle">Modal</h3>
+          <div class="showcase">
+            <p class="showcase__caption">&lt;dialog class="modal"&gt; — abierto con la API nativa showModal()</p>
+            <button class="btn btn--secondary" type="button" data-open-project="fraude">
+              Abrir modal de ejemplo
+            </button>
+          </div>
+
+          <h3 class="ds-subtitle">Botón de icono</h3>
+          <div class="showcase">
+            <p class="showcase__caption">.icon-button — usado en tema, menú y volver arriba</p>
+            <button class="icon-button" type="button" aria-label="Ejemplo de botón de icono">
+              <span aria-hidden="true"><i class="bi bi-star-fill" aria-hidden="true"></i></span>
+            </button>
+            <button class="icon-button" type="button" aria-label="Ejemplo de botón de cierre">
+              <span aria-hidden="true"><i class="bi bi-x-lg" aria-hidden="true"></i></span>
+            </button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__text">
+        © <span id="anio-actual">2026</span> Oswaldo Danilo Angulo Tamayo · Design System del portafolio.
+      </p>
+      <ul class="footer__links">
+        <li><a href="index.html">Portafolio</a></li>
+        <li><a href="#componentes">Componentes</a></li>
+        <li><a href="https://github.com/danilo323" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <dialog class="modal" id="project-modal" aria-labelledby="modal-title">
+    <div class="modal__header">
+      <h2 class="modal__title" id="modal-title">Detalle del proyecto</h2>
+      <button class="icon-button" type="button" id="modal-close" aria-label="Cerrar ventana de detalle">
+        <span aria-hidden="true"><i class="bi bi-x-lg" aria-hidden="true"></i></span>
+      </button>
+    </div>
+    <div class="modal__body" id="modal-body"></div>
+    <div class="modal__footer" id="modal-footer"></div>
+  </dialog>
+
+  <button class="icon-button back-to-top" id="back-to-top" type="button" aria-label="Volver al inicio de la página">
+    <span aria-hidden="true"><i class="bi bi-arrow-up" aria-hidden="true"></i></span>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
