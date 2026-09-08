@@ -1342,3 +1342,15 @@ figure { margin: 0; }
   vertical-align: super;
   color: var(--color-danger);
 }
+
+.type-demo {
+  margin: 0;
+  max-width: none;
+  line-height: var(--leading-tight);
+  font-weight: var(--weight-bold);
+  color: var(--color-text);
+}
+
+.type-demo--h1 { font-size: var(--text-4xl); }
+.type-demo--h2 { font-size: var(--text-3xl); }
+.type-demo--h3 { font-size: var(--text-xl); }
