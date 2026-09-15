@@ -19,17 +19,6 @@ Este proyecto es el portafolio web personal e interactivo de Oswaldo Danilo Angu
    - Filtro interactivo de proyectos por tecnología (Python, TypeScript, etc.).
 5. **Secciones Informativas:** Inicio (Hero), Sobre Mí, Habilidades (Skills), Proyectos Destacados y Contacto.
 
-## Historial de Desarrollo (Esquema de 7 Commits)
-
-El proyecto fue desarrollado de manera estructurada en 7 etapas (commits) iterativas:
-
-1. **Commit 1:** Estructura HTML Base (HTML5 semántico).
-2. **Commit 2:** Arquitectura CSS y Variables (Design System).
-3. **Commit 3:** Página del Design System y maquetación de componentes.
-4. **Commit 4:** Maquetación de Secciones de Presentación (Inicio, Sobre mí, Habilidades).
-5. **Commit 5:** Maquetación de Proyectos y Formulario de Contacto.
-6. **Commit 6:** Lógica e interactividad en JavaScript.
-7. **Commit 7:** Pulido responsivo final, revisiones de accesibilidad y despliegue.
 
 ## Cómo ejecutar localmente
 
