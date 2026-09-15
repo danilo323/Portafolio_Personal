@@ -14,11 +14,13 @@ body {
     color: var(--color-text);
     font-family: var(--font-primary);
     line-height: 1.6;
+    animation: fadeIn 0.8s ease-in-out; /* Animación simple de entrada */
 }
 
 a {
     text-decoration: none;
     color: var(--color-primary);
+    transition: color 0.3s ease; /* Transición suave de color */
 }
 
 ul {
@@ -40,6 +42,7 @@ header {
     box-shadow: var(--shadow-card);
     position: sticky;
     top: 0;
+    z-index: 100;
 }
 
 nav {
@@ -85,6 +88,12 @@ section {
     width: 250px;
     height: 250px;
     object-fit: cover;
+    box-shadow: var(--shadow-card);
+    transition: transform 0.3s ease; /* Prepara la imagen para animarse al hacer hover */
+}
+
+.hero-image img:hover {
+    transform: scale(1.05); /* Efecto de acercamiento */
 }
 
 .btn {
@@ -95,11 +104,21 @@ section {
     border: none;
     display: inline-block;
     margin-right: var(--space-sm);
+    transition: transform 0.2s ease, background-color 0.3s ease; /* Animación de botones */
+}
+
+.btn:hover {
+    transform: translateY(-3px); /* El botón "flota" hacia arriba un poco */
 }
 
 .btn-primary {
     background-color: var(--color-primary);
     color: #fff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-secondary);
 }
 
 .btn-secondary {
@@ -118,10 +137,17 @@ section {
     background-color: var(--color-surface);
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-card);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación en tarjetas */
+}
+
+.skill-category:hover, .project-card:hover {
+    transform: translateY(-5px); /* Efecto de elevación al poner el mouse */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6); /* Sombra más profunda para dar relieve */
 }
 
 .skill-category {
     padding: var(--space-md);
+    border-top: 3px solid var(--color-primary); /* Detalle decorativo superior */
 }
 
 .project-card {
@@ -161,6 +187,9 @@ section {
     padding: var(--space-sm);
     border-radius: var(--radius-sm);
     border: 1px solid var(--color-text-muted);
+    font-family: var(--font-primary);
+    background-color: var(--color-surface);
+    color: var(--color-text);
 }
 
 .social-links {
@@ -172,4 +201,16 @@ section {
 footer {
     text-align: center;
     padding: var(--space-lg);
+}
+
+/* --- Definición de la animación simple (Keyframes) --- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
