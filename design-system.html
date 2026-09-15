@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design System - Portafolio</title>
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Estilos exclusivos para organizar el Layout del Design System */
+        .ds-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--space-lg);
+        }
+        .ds-header {
+            margin-bottom: var(--space-lg);
+            border-bottom: 2px solid var(--color-primary);
+            padding-bottom: var(--space-md);
+        }
+        .ds-section {
+            background-color: var(--color-surface);
+            padding: var(--space-lg);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-card);
+            margin-bottom: var(--space-lg);
+        }
+        .ds-section h2 {
+            border-bottom: 1px solid var(--color-text-muted);
+            padding-bottom: var(--space-sm);
+            margin-bottom: var(--space-lg);
+        }
+        .ds-color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: var(--space-md);
+        }
+        .ds-color-box {
+            height: 100px;
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: flex-end;
+            padding: var(--space-sm);
+            font-weight: bold;
+            color: white;
+            box-shadow: inset 0 0 0 1px rgba(255,255,255,0.2);
+        }
+        .ds-spacing-box {
+            background-color: var(--color-primary);
+            margin-bottom: var(--space-sm);
+            border-radius: 4px;
+        }
+        .ds-component-demo {
+            padding: var(--space-md);
+            border: 1px dashed var(--color-text-muted);
+            border-radius: var(--radius-sm);
+            margin-bottom: var(--space-lg);
+            background-color: var(--color-background);
+        }
+    </style>
+</head>
+<body>
+    <div class="ds-container">
+        <header class="ds-header">
+            <h1>Design System / Componentes</h1>
+            <p>Documentación visual de la arquitectura CSS utilizada en el portafolio, cumpliendo con la rúbrica.</p>
+            <a href="index.html" class="btn btn-secondary" style="margin-top: var(--space-md);">← Volver al Portafolio</a>
+        </header>
+
+        <!-- 1. COLORES -->
+        <section class="ds-section">
+            <h2>1. Colores (Tokens)</h2>
+            <div class="ds-color-grid">
+                <div class="ds-color-box" style="background-color: var(--color-primary);">Primary</div>
+                <div class="ds-color-box" style="background-color: var(--color-secondary);">Secondary</div>
+                <div class="ds-color-box" style="background-color: var(--color-background); color: var(--color-text); border: 1px solid #333;">Background</div>
+                <div class="ds-color-box" style="background-color: var(--color-surface); color: var(--color-text); border: 1px solid #333;">Surface</div>
+                <div class="ds-color-box" style="background-color: var(--color-text); color: var(--color-background);">Text</div>
+                <div class="ds-color-box" style="background-color: var(--color-text-muted);">Text Muted</div>
+            </div>
+        </section>
+
+        <!-- 2. TIPOGRAFÍA -->
+        <section class="ds-section">
+            <h2>2. Tipografía</h2>
+            <div class="ds-component-demo">
+                <h1>Heading 1 (h1)</h1>
+                <h2>Heading 2 (h2)</h2>
+                <h3>Heading 3 (h3)</h3>
+                <p><strong>Párrafo:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#">Este es un enlace de ejemplo</a> dentro del texto.</p>
+                <p style="color: var(--color-text-muted);">Texto secundario (Text Muted) para descripciones breves.</p>
+            </div>
+        </section>
+
+        <!-- 3. ESPACIADOS -->
+        <section class="ds-section">
+            <h2>3. Sistema de Espaciados (Spacing)</h2>
+            <div class="ds-component-demo">
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem;">
+                    <div class="ds-spacing-box" style="width: var(--space-sm); height: var(--space-sm);"></div>
+                    <span>--space-sm (0.5rem)</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem;">
+                    <div class="ds-spacing-box" style="width: var(--space-md); height: var(--space-md);"></div>
+                    <span>--space-md (1rem)</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <div class="ds-spacing-box" style="width: var(--space-lg); height: var(--space-lg);"></div>
+                    <span>--space-lg (2rem)</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. COMPONENTES REUTILIZABLES -->
+        <section class="ds-section">
+            <h2>4. Componentes Reutilizables</h2>
+
+            <h3>Botones</h3>
+            <div class="ds-component-demo" style="display: flex; gap: var(--space-md);">
+                <button class="btn btn-primary">Botón Primario</button>
+                <button class="btn btn-secondary">Botón Secundario</button>
+            </div>
+
+            <h3>Badge / Skill (Tecnología)</h3>
+            <div class="ds-component-demo">
+                <div class="project-tech">
+                    <span>Python</span>
+                    <span>Django</span>
+                    <span>TypeScript</span>
+                </div>
+            </div>
+
+            <h3>Card de Proyecto</h3>
+            <div class="ds-component-demo">
+                <div class="projects-grid" style="grid-template-columns: 1fr; max-width: 350px;">
+                    <article class="project-card">
+                        <figure>
+                            <img src="https://via.placeholder.com/400x200.png?text=Preview+Card" alt="Preview">
+                        </figure>
+                        <div class="project-info">
+                            <h3>Nombre del Proyecto</h3>
+                            <p>Breve descripción del proyecto demostrando el componente de tarjeta reutilizable.</p>
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <h3>Formularios (Input & Textarea)</h3>
+            <div class="ds-component-demo">
+                <form class="contact-form" style="max-width: 400px;" onsubmit="event.preventDefault()">
+                    <div class="form-group">
+                        <label>Input de Texto</label>
+                        <input type="text" placeholder="Escribe aquí...">
+                    </div>
+                    <div class="form-group">
+                        <label>Área de Texto (Textarea)</label>
+                        <textarea rows="3" placeholder="Mensaje..."></textarea>
+                    </div>
+                </form>
+            </div>
+
+        </section>
+    </div>
+</body>
+</html>
