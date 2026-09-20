@@ -10,3 +10,7 @@ Thumbs.db
 # Temporales
 *.log
 *.tmp
+
+# Guía
+geminis.md
+GEMINIS.MD
