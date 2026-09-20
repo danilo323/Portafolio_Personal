@@ -61,33 +61,29 @@
             </p>
 
             <div class="hero__actions">
-              <a class="btn btn--primary" href="#proyectos">Ver proyectos</a>
+              <a class="btn btn--primary" href="assets/cv.pdf" download>Descargar CV</a>
               <a class="btn btn--secondary" href="#contacto">Contáctame</a>
-              <a class="btn btn--ghost" href="https://github.com/danilo323" target="_blank" rel="noopener noreferrer">
-                GitHub <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
-              </a>
             </div>
 
-            <dl class="hero__stats">
-              <div>
-                <dt class="hero__stat-label">Proyectos destacados</dt>
-                <dd class="hero__stat-value">3</dd>
-              </div>
-              <div>
-                <dt class="hero__stat-label">Formación</dt>
-                <dd class="hero__stat-value">UNEMI</dd>
-              </div>
-              <div>
-                <dt class="hero__stat-label">Enfoque</dt>
-                <dd class="hero__stat-value">Web + IA</dd>
-              </div>
-            </dl>
+            <div class="hero__social">
+              <a href="https://wa.me/593999999999" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-whatsapp" aria-hidden="true"></i>
+              </a>
+              <a href="https://linkedin.com/in/danilo" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-linkedin" aria-hidden="true"></i>
+              </a>
+              <a href="https://github.com/danilo323" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-github" aria-hidden="true"></i>
+              </a>
+              <a href="https://instagram.com/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-instagram" aria-hidden="true"></i>
+              </a>
+            </div>
           </div>
 
           <figure class="hero__figure">
-            <img class="hero__avatar" src="assets/img/avatar.svg"
-                 alt="Avatar ilustrado de Oswaldo Danilo Angulo Tamayo" width="320" height="320">
-            <figcaption class="hero__figcaption">Babahoyo, Los Ríos · Ecuador</figcaption>
+            <img class="hero__avatar" src="assets/img/img_icon.jpeg"
+                 alt="Avatar de Oswaldo Danilo Angulo Tamayo" width="320" height="320">
           </figure>
         </div>
       </div>
@@ -191,169 +187,161 @@
           </p>
         </header>
 
-        <div class="skills__group reveal">
+        <div class="filters" id="skill-filters" role="group" aria-label="Filtrar habilidades por categoría">
+          <button class="filter-btn" type="button" data-filter="all" aria-pressed="true">Todas</button>
+          <button class="filter-btn" type="button" data-filter="frontend" aria-pressed="false">Frontend</button>
+          <button class="filter-btn" type="button" data-filter="backend" aria-pressed="false">Backend</button>
+          <button class="filter-btn" type="button" data-filter="db" aria-pressed="false">Bases de datos</button>
+          <button class="filter-btn" type="button" data-filter="ia" aria-pressed="false">Datos e IA</button>
+          <button class="filter-btn" type="button" data-filter="tools" aria-pressed="false">Herramientas</button>
+        </div>
+
+        <div class="skills__group reveal" data-skill-category="frontend">
           <h3 class="skills__group-title"><i class="bi bi-window icon--frontend" aria-hidden="true"></i> Frontend</h3>
           <div class="skills__grid">
-            <article class="skill-card">
-              <p class="skill-card__icon icon--html" aria-hidden="true"><i class="bi bi-filetype-html"></i></p>
-              <div class="skill-card__content">
-                <h4 class="skill-card__name">HTML5 <span class="skill-card__level">Avanzado</span></h4>
-                <p class="skill-card__desc">Estructura semántica y accesible.</p>
-                <div class="progress"><span class="progress__bar" data-level="90"></span></div>
-              </div>
-            </article>
-            <article class="skill-card">
-              <p class="skill-card__icon icon--css" aria-hidden="true"><i class="bi bi-filetype-css"></i></p>
-              <div class="skill-card__content">
-                <h4 class="skill-card__name">CSS3 <span class="skill-card__level">Intermedio-alto</span></h4>
-                <p class="skill-card__desc">Flexbox, Grid, custom properties y diseño responsive.</p>
-                <div class="progress"><span class="progress__bar" data-level="80"></span></div>
-              </div>
-            </article>
-            <article class="skill-card">
-              <p class="skill-card__icon icon--js" aria-hidden="true"><i class="bi bi-filetype-js"></i></p>
-              <div class="skill-card__content">
-                <h4 class="skill-card__name">JavaScript <span class="skill-card__level">Intermedio</span></h4>
-                <p class="skill-card__desc">DOM, eventos, fetch y ES6+.</p>
-                <div class="progress"><span class="progress__bar" data-level="75"></span></div>
-              </div>
-            </article>
-            <article class="skill-card">
-              <p class="skill-card__icon icon--react" aria-hidden="true"><i class="bi bi-diagram-3"></i></p>
-              <div class="skill-card__content">
-                <h4 class="skill-card__name">React <span class="skill-card__level">Intermedio</span></h4>
-                <p class="skill-card__desc">Componentes, hooks y consumo de APIs.</p>
-                <div class="progress"><span class="progress__bar" data-level="70"></span></div>
-              </div>
-            </article>
-            <article class="skill-card">
-              <p class="skill-card__icon icon--ts" aria-hidden="true"><i class="bi bi-filetype-tsx"></i></p>
-              <div class="skill-card__content">
-                <h4 class="skill-card__name">TypeScript <span class="skill-card__level">Básico-intermedio</span></h4>
-                <p class="skill-card__desc">Tipado de componentes y servicios.</p>
-                <div class="progress"><span class="progress__bar" data-level="60"></span></div>
-              </div>
-            </article>
+            <button class="skill-card" type="button" data-open-skill="html5">
+              <span class="skill-card__icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="html5 icon" width="24" height="24"></span>
+              <span class="skill-card__info">
+                <span class="skill-card__name">HTML5</span>
+                <span class="skill-card__subtitle">Frontend</span>
+              </span>
+            </button>
+            <button class="skill-card" type="button" data-open-skill="css3">
+              <span class="skill-card__icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="css3 icon" width="24" height="24"></span>
+              <span class="skill-card__info">
+                <span class="skill-card__name">CSS3</span>
+                <span class="skill-card__subtitle">Frontend</span>
+              </span>
+            </button>
+            <button class="skill-card" type="button" data-open-skill="javascript">
+              <span class="skill-card__icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="javascript icon" width="24" height="24"></span>
+              <span class="skill-card__info">
+                <span class="skill-card__name">JavaScript</span>
+                <span class="skill-card__subtitle">Language</span>
+              </span>
+            </button>
+            <button class="skill-card" type="button" data-open-skill="react">
+              <span class="skill-card__icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="react icon" width="24" height="24"></span>
+              <span class="skill-card__info">
+                <span class="skill-card__name">React</span>
+                <span class="skill-card__subtitle">Frontend</span>
+              </span>
+            </button>
+            <button class="skill-card" type="button" data-open-skill="typescript">
+              <span class="skill-card__icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt="typescript icon" width="24" height="24"></span>
+              <span class="skill-card__info">
+                <span class="skill-card__name">TypeScript</span>
+                <span class="skill-card__subtitle">Language</span>
+              </span>
+            </button>
           </div>
         </div>
 
-        <div class="skills__group reveal">
+        <div class="skills__group reveal" data-skill-category="backend">
           <h3 class="skills__group-title"><i class="bi bi-hdd-stack icon--backend" aria-hidden="true"></i> Backend</h3>
           <div class="skills__grid">
-            <article class="skill-card">
-              <p class="skill-card__icon icon--python" aria-hidden="true"><i class="bi bi-filetype-py"></i></p>
-              <div class="skill-card__content">
-                <h4 class="skill-card__name">Python <span class="skill-card__level">Avanzado</span></h4>
-                <p class="skill-card__desc">Lógica de negocio, validaciones y scripts de datos.</p>
-                <div class="progress"><span class="progress__bar" data-level="88"></span></div>
-              </div>
-            </article>
-            <article class="skill-card">
-              <p class="skill-card__icon icon--django" aria-hidden="true"><i class="bi bi-server"></i></p>
-              <div class="skill-card__content">
-                <h4 class="skill-card__name">Django <span class="skill-card__level">Intermedio-alto</span></h4>
-                <p class="skill-card__desc">Patrón MVT, ORM, validadores y formularios.</p>
-                <div class="progress"><span class="progress__bar" data-level="82"></span></div>
-              </div>
-            </article>
-            <article class="skill-card">
-              <p class="skill-card__icon icon--nest" aria-hidden="true"><i class="bi bi-diagram-2"></i></p>
-              <div class="skill-card__content">
-                <h4 class="skill-card__name">NestJS <span class="skill-card__level">Básico</span></h4>
-                <p class="skill-card__desc">Módulos, controladores y servicios. En aprendizaje.</p>
-                <div class="progress"><span class="progress__bar" data-level="50"></span></div>
-              </div>
-            </article>
+            <button class="skill-card" type="button" data-open-skill="python">
+              <span class="skill-card__icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="python icon" width="24" height="24"></span>
+              <span class="skill-card__info">
+                <span class="skill-card__name">Python</span>
+                <span class="skill-card__subtitle">Language</span>
+              </span>
+            </button>
+            <button class="skill-card" type="button" data-open-skill="django">
+              <span class="skill-card__icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg" class="icon-invert-dark" alt="django icon" width="24" height="24"></span>
+              <span class="skill-card__info">
+                <span class="skill-card__name">Django</span>
+                <span class="skill-card__subtitle">Framework</span>
+              </span>
+            </button>
+            <button class="skill-card" type="button" data-open-skill="nestjs">
+              <span class="skill-card__icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nestjs/nestjs-original.svg" alt="nestjs icon" width="24" height="24"></span>
+              <span class="skill-card__info">
+                <span class="skill-card__name">NestJS</span>
+                <span class="skill-card__subtitle">Framework</span>
+              </span>
+            </button>
           </div>
         </div>
 
-        <div class="skills__group reveal">
+        <div class="skills__group reveal" data-skill-category="db">
           <h3 class="skills__group-title"><i class="bi bi-database-fill icon--db" aria-hidden="true"></i> Bases de datos</h3>
           <div class="skills__grid">
-            <article class="skill-card">
-              <p class="skill-card__icon icon--postgres" aria-hidden="true"><i class="bi bi-database"></i></p>
-              <div class="skill-card__content">
-                <h4 class="skill-card__name">PostgreSQL <span class="skill-card__level">Intermedio</span></h4>
-                <p class="skill-card__desc">Modelado relacional y consultas.</p>
-                <div class="progress"><span class="progress__bar" data-level="72"></span></div>
-              </div>
-            </article>
-            <article class="skill-card">
-              <p class="skill-card__icon icon--mysql" aria-hidden="true"><i class="bi bi-database-fill"></i></p>
-              <div class="skill-card__content">
-                <h4 class="skill-card__name">MySQL <span class="skill-card__level">Intermedio</span></h4>
-                <p class="skill-card__desc">Diseño de esquemas y normalización.</p>
-                <div class="progress"><span class="progress__bar" data-level="70"></span></div>
-              </div>
-            </article>
-            <article class="skill-card">
-              <p class="skill-card__icon icon--mssql" aria-hidden="true"><i class="bi bi-database-check"></i></p>
-              <div class="skill-card__content">
-                <h4 class="skill-card__name">SQL Server <span class="skill-card__level">Básico-intermedio</span></h4>
-                <p class="skill-card__desc">Consultas y procedimientos básicos.</p>
-                <div class="progress"><span class="progress__bar" data-level="58"></span></div>
-              </div>
-            </article>
+            <button class="skill-card" type="button" data-open-skill="postgresql">
+              <span class="skill-card__icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="postgresql icon" width="24" height="24"></span>
+              <span class="skill-card__info">
+                <span class="skill-card__name">PostgreSQL</span>
+                <span class="skill-card__subtitle">Database</span>
+              </span>
+            </button>
+            <button class="skill-card" type="button" data-open-skill="mysql">
+              <span class="skill-card__icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="mysql icon" width="24" height="24"></span>
+              <span class="skill-card__info">
+                <span class="skill-card__name">MySQL</span>
+                <span class="skill-card__subtitle">Database</span>
+              </span>
+            </button>
+            <button class="skill-card" type="button" data-open-skill="sqlserver">
+              <span class="skill-card__icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg" alt="sqlserver icon" width="24" height="24"></span>
+              <span class="skill-card__info">
+                <span class="skill-card__name">SQL Server</span>
+                <span class="skill-card__subtitle">Database</span>
+              </span>
+            </button>
           </div>
         </div>
 
-        <div class="skills__group reveal">
+        <div class="skills__group reveal" data-skill-category="ia">
           <h3 class="skills__group-title"><i class="bi bi-cpu icon--ia" aria-hidden="true"></i> Datos e Inteligencia Artificial</h3>
           <div class="skills__grid">
-            <article class="skill-card">
-              <p class="skill-card__icon icon--sklearn" aria-hidden="true"><i class="bi bi-graph-up-arrow"></i></p>
-              <div class="skill-card__content">
-                <h4 class="skill-card__name">scikit-learn <span class="skill-card__level">Intermedio</span></h4>
-                <p class="skill-card__desc">Gradient Boosting, entrenamiento y evaluación de modelos.</p>
-                <div class="progress"><span class="progress__bar" data-level="68"></span></div>
-              </div>
-            </article>
-            <article class="skill-card">
-              <p class="skill-card__icon icon--pandas" aria-hidden="true"><i class="bi bi-table"></i></p>
-              <div class="skill-card__content">
-                <h4 class="skill-card__name">Pandas <span class="skill-card__level">Intermedio</span></h4>
-                <p class="skill-card__desc">Limpieza y preparación de datasets.</p>
-                <div class="progress"><span class="progress__bar" data-level="70"></span></div>
-              </div>
-            </article>
-            <article class="skill-card">
-              <p class="skill-card__icon icon--nlp" aria-hidden="true"><i class="bi bi-chat-square-text"></i></p>
-              <div class="skill-card__content">
-                <h4 class="skill-card__name">NLP aplicado <span class="skill-card__level">Básico</span></h4>
-                <p class="skill-card__desc">Similitud de textos en narrativas de siniestros.</p>
-                <div class="progress"><span class="progress__bar" data-level="52"></span></div>
-              </div>
-            </article>
+            <button class="skill-card" type="button" data-open-skill="scikitlearn">
+              <span class="skill-card__icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg" alt="scikitlearn icon" width="24" height="24"></span>
+              <span class="skill-card__info">
+                <span class="skill-card__name">scikit-learn</span>
+                <span class="skill-card__subtitle">Data/ML Library</span>
+              </span>
+            </button>
+            <button class="skill-card" type="button" data-open-skill="pandas">
+              <span class="skill-card__icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" alt="pandas icon" width="24" height="24"></span>
+              <span class="skill-card__info">
+                <span class="skill-card__name">Pandas</span>
+                <span class="skill-card__subtitle">Data/ML Library</span>
+              </span>
+            </button>
+            <button class="skill-card" type="button" data-open-skill="nlp">
+              <span class="skill-card__icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg" alt="nlp icon" width="24" height="24"></span>
+              <span class="skill-card__info">
+                <span class="skill-card__name">NLP aplicado</span>
+                <span class="skill-card__subtitle">Concept</span>
+              </span>
+            </button>
           </div>
         </div>
 
-        <div class="skills__group reveal">
+        <div class="skills__group reveal" data-skill-category="tools">
           <h3 class="skills__group-title"><i class="bi bi-tools icon--tools" aria-hidden="true"></i> Herramientas</h3>
           <div class="skills__grid">
-            <article class="skill-card">
-              <p class="skill-card__icon icon--git" aria-hidden="true"><i class="bi bi-git"></i></p>
-              <div class="skill-card__content">
-                <h4 class="skill-card__name">Git y GitHub <span class="skill-card__level">Intermedio</span></h4>
-                <p class="skill-card__desc">Ramas, commits descriptivos y GitHub Pages.</p>
-                <div class="progress"><span class="progress__bar" data-level="75"></span></div>
-              </div>
-            </article>
-            <article class="skill-card">
-              <p class="skill-card__icon icon--colab" aria-hidden="true"><i class="bi bi-journal-code"></i></p>
-              <div class="skill-card__content">
-                <h4 class="skill-card__name">Google Colab <span class="skill-card__level">Intermedio</span></h4>
-                <p class="skill-card__desc">Entrenamiento y exportación de modelos con Joblib.</p>
-                <div class="progress"><span class="progress__bar" data-level="70"></span></div>
-              </div>
-            </article>
-            <article class="skill-card">
-              <p class="skill-card__icon icon--vscode" aria-hidden="true"><i class="bi bi-code-slash"></i></p>
-              <div class="skill-card__content">
-                <h4 class="skill-card__name">VS Code <span class="skill-card__level">Avanzado</span></h4>
-                <p class="skill-card__desc">Entorno diario de desarrollo y depuración.</p>
-                <div class="progress"><span class="progress__bar" data-level="85"></span></div>
-              </div>
-            </article>
+            <button class="skill-card" type="button" data-open-skill="git">
+              <span class="skill-card__icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" class="icon-invert-dark" alt="git icon" width="24" height="24"></span>
+              <span class="skill-card__info">
+                <span class="skill-card__name">Git y GitHub</span>
+                <span class="skill-card__subtitle">Version Control</span>
+              </span>
+            </button>
+            <button class="skill-card" type="button" data-open-skill="colab">
+              <span class="skill-card__icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original.svg" alt="colab icon" width="24" height="24"></span>
+              <span class="skill-card__info">
+                <span class="skill-card__name">Google Colab</span>
+                <span class="skill-card__subtitle">Editor / IDE</span>
+              </span>
+            </button>
+            <button class="skill-card" type="button" data-open-skill="vscode">
+              <span class="skill-card__icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt="vscode icon" width="24" height="24"></span>
+              <span class="skill-card__info">
+                <span class="skill-card__name">VS Code</span>
+                <span class="skill-card__subtitle">Editor / IDE</span>
+              </span>
+            </button>
           </div>
         </div>
       </div>
@@ -482,6 +470,12 @@
         <p class="projects__empty" id="projects-empty" hidden>
           No hay proyectos que coincidan con este filtro.
         </p>
+
+        <div class="projects__more reveal" style="text-align: center; margin-top: var(--space-xl);">
+          <a class="btn btn--secondary btn--lg" href="https://github.com/danilo323" target="_blank" rel="noopener noreferrer">
+            <i class="bi bi-github" aria-hidden="true" style="margin-right: var(--space-2xs);"></i> Mostrar más proyectos
+          </a>
+        </div>
       </div>
     </section>
 
@@ -616,7 +610,7 @@
     </div>
   </footer>
 
-  <dialog class="modal" id="project-modal" aria-labelledby="modal-title">
+  <dialog class="modal" id="info-modal" aria-labelledby="modal-title">
     <div class="modal__header">
       <h2 class="modal__title" id="modal-title">Detalle del proyecto</h2>
       <button class="icon-button" type="button" id="modal-close" aria-label="Cerrar ventana de detalle">

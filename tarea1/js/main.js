@@ -128,6 +128,28 @@
     });
   }
 
+  const skillFilterBar = document.getElementById("skill-filters");
+  const skillGroups = Array.from(document.querySelectorAll(".skills__group"));
+
+  if (skillFilterBar && skillGroups.length > 0) {
+    skillFilterBar.addEventListener("click", function (event) {
+      const button = event.target.closest(".filter-btn");
+      if (!button) return;
+
+      const filter = button.dataset.filter;
+
+      skillFilterBar.querySelectorAll(".filter-btn").forEach(function (btn) {
+        btn.setAttribute("aria-pressed", String(btn === button));
+      });
+
+      skillGroups.forEach(function (group) {
+        const category = group.dataset.skillCategory;
+        const matches = filter === "all" || category === filter;
+        group.classList.toggle("is-hidden", !matches);
+      });
+    });
+  }
+
   
 
   const PROJECTS = {
@@ -183,14 +205,122 @@
     }
   };
 
-  const modal = document.getElementById("project-modal");
+  
+  
+  const SKILLS = {
+    html5: {
+      title: "HTML5",
+      level: "Avanzado",
+      levelValue: 90,
+      desc: "Domino la arquitectura semántica de la web moderna. Implemento estructuras accesibles y escalables, optimizando el SEO técnico y asegurando que las aplicaciones sean perfectamente interpretadas por cualquier navegador o lector de pantalla."
+    },
+    css3: {
+      title: "CSS3",
+      level: "Intermedio-alto",
+      levelValue: 80,
+      desc: "Diseño interfaces altamente fluidas y responsivas. Domino Flexbox, CSS Grid y el sistema de variables (Custom Properties) para crear sistemas de diseño escalables y mantenibles sin depender ciegamente de frameworks."
+    },
+    javascript: {
+      title: "JavaScript",
+      level: "Avanzado",
+      levelValue: 85,
+      desc: "Escribo lógica de cliente robusta y optimizada con ES6+. Experto en la manipulación dinámica del DOM, gestión de asincronía (Promesas, async/await) y consumo eficiente de APIs para crear experiencias de usuario impecables."
+    },
+    react: {
+      title: "React",
+      level: "Intermedio-alto",
+      levelValue: 75,
+      desc: "Construyo Single Page Applications veloces y modulares. Desarrollo componentes reutilizables, gestiono ciclos de vida complejos mediante Hooks y centralizo el estado de la aplicación para arquitecturas frontend robustas."
+    },
+    typescript: {
+      title: "TypeScript",
+      level: "Intermedio",
+      levelValue: 70,
+      desc: "Blindo las aplicaciones JavaScript mediante tipado estático estricto. Diseño interfaces e implemento arquitecturas de datos sólidas que eliminan errores en tiempo de ejecución y potencian la escalabilidad del código en equipos."
+    },
+    python: {
+      title: "Python",
+      level: "Avanzado",
+      levelValue: 88,
+      desc: "Mi principal arma para ingeniería backend y ciencia de datos. Desarrollo scripts de alto rendimiento, modelos analíticos e implemento lógica de negocio compleja, escribiendo siempre código limpio, modular y 100% Pythonic."
+    },
+    django: {
+      title: "Django",
+      level: "Intermedio-alto",
+      levelValue: 82,
+      desc: "Construyo arquitecturas web seguras y escalables usando el patrón MVT. Optimizo agresivamente consultas al ORM, desarrollo validadores robustos en el backend e implemento sistemas complejos de autenticación y autorización."
+    },
+    nestjs: {
+      title: "NestJS",
+      level: "Intermedio",
+      levelValue: 65,
+      desc: "Desarrollo APIs REST y microservicios escalables para entornos corporativos en Node.js. Aprovecho su arquitectura orientada a módulos y la inyección de dependencias estricta con TypeScript para construir backends resilientes."
+    },
+    postgresql: {
+      title: "PostgreSQL",
+      level: "Intermedio-alto",
+      levelValue: 78,
+      desc: "Diseño bases de datos relacionales sólidas bajo estrictos principios de normalización. Escribo consultas complejas de alto rendimiento y garantizo la integridad absoluta de los datos transaccionales de la aplicación."
+    },
+    mysql: {
+      title: "MySQL",
+      level: "Intermedio",
+      levelValue: 75,
+      desc: "Administro esquemas relacionales ágiles y eficientes. Optimizo motores de almacenamiento, gestiono índices de alta concurrencia y aseguro la estabilidad de la persistencia de datos en aplicaciones web en producción."
+    },
+    sqlserver: {
+      title: "SQL Server",
+      level: "Intermedio",
+      levelValue: 70,
+      desc: "Gestiono ecosistemas de datos empresariales mediante T-SQL avanzado. Implemento lógica transaccional mediante procedimientos almacenados optimizados y aseguro el máximo rendimiento en consultas analíticas pesadas."
+    },
+    scikitlearn: {
+      title: "scikit-learn",
+      level: "Intermedio-alto",
+      levelValue: 78,
+      desc: "Ingeniería de Machine Learning de extremo a extremo. Preparo y vectorizo datos complejos, optimizo hiperparámetros de algoritmos de clasificación/regresión y exporto modelos listos para integrarse en servidores de producción."
+    },
+    pandas: {
+      title: "Pandas",
+      level: "Avanzado",
+      levelValue: 85,
+      desc: "Manipulo masivas cantidades de datos con precisión quirúrgica. Realizo análisis exploratorios complejos, ingeniería de características (feature engineering) y limpiezas exhaustivas para alimentar modelos de inteligencia artificial."
+    },
+    nlp: {
+      title: "NLP aplicado",
+      level: "Intermedio",
+      levelValue: 70,
+      desc: "Desarrollo soluciones impulsadas por Procesamiento de Lenguaje Natural. Mido distancias semánticas, analizo contextos y entreno sistemas capaces de justificar decisiones automáticamente a través de la generación de texto."
+    },
+    git: {
+      title: "Git y GitHub",
+      level: "Intermedio-alto",
+      levelValue: 80,
+      desc: "Domino el control de versiones para integración continua. Gestiono flujos de trabajo profesionales con branches, resuelvo conflictos complejos de merge y aseguro un historial de commits inmaculado para el trabajo en equipo."
+    },
+    colab: {
+      title: "Google Colab",
+      level: "Avanzado",
+      levelValue: 85,
+      desc: "Orquesto entrenamientos de Machine Learning aprovechando poder de cómputo en la nube. Documento los experimentos rigurosamente y estructuro pipelines analíticos altamente reproducibles mediante notebooks interactivos."
+    },
+    vscode: {
+      title: "VS Code",
+      level: "Avanzado",
+      levelValue: 90,
+      desc: "Opero mi entorno de desarrollo a la máxima velocidad. Empleo automatización de formateo, depuradores integrados, y gestión directa del terminal para maximizar la productividad y enfocarme 100% en resolver problemas."
+    }
+  };
+
+
+  const modal = document.getElementById("info-modal");
   const modalTitle = document.getElementById("modal-title");
   const modalBody = document.getElementById("modal-body");
   const modalFooter = document.getElementById("modal-footer");
   const modalClose = document.getElementById("modal-close");
   let lastFocused = null;
 
-  function renderModal(project) {
+  function renderProjectModal(project) {
     modalTitle.textContent = project.title;
 
     const solutionItems = project.solution
@@ -234,17 +364,47 @@
     modalFooter.innerHTML = footer;
   }
 
+  function renderSkillModal(skill) {
+    modalTitle.textContent = skill.title;
+    
+    modalBody.innerHTML = 
+      '<p class="skill-card__level" style="margin-bottom: var(--space-xs);">' + skill.level + '</p>' +
+      '<div class="progress" style="margin-bottom: var(--space-md);">' +
+        '<span class="progress__bar" style="width: ' + skill.levelValue + '%; transition: width 1s ease;"></span>' +
+      '</div>' +
+      '<p>' + skill.desc + '</p>';
+      
+    modalFooter.innerHTML = '<button class="btn btn--secondary btn--sm" type="button" data-close-modal>Entendido</button>';
+  }
+
   if (modal && modalBody) {
     document.addEventListener("click", function (event) {
-      const trigger = event.target.closest("[data-open-project]");
-      if (!trigger) return;
-
-      const project = PROJECTS[trigger.dataset.openProject];
-      if (!project) return;
-
-      lastFocused = trigger;
-      renderModal(project);
-      modal.showModal();
+      const btnProject = event.target.closest("[data-open-project]");
+      const btnSkill = event.target.closest("[data-open-skill]");
+      const btnClose = event.target.closest("[data-close-modal]");
+      
+      if (btnClose) {
+        modal.close();
+        return;
+      }
+      
+      if (btnProject) {
+        const project = PROJECTS[btnProject.dataset.openProject];
+        if (!project) return;
+        lastFocused = btnProject;
+        renderProjectModal(project);
+        modal.showModal();
+        return;
+      }
+      
+      if (btnSkill) {
+        const skill = SKILLS[btnSkill.dataset.openSkill];
+        if (!skill) return;
+        lastFocused = btnSkill;
+        renderSkillModal(skill);
+        modal.showModal();
+        return;
+      }
     });
 
     if (modalClose) {
@@ -262,7 +422,6 @@
     });
   }
 
-  
 
   const form = document.getElementById("contact-form");
   const formStatus = document.getElementById("form-status");
