@@ -68,6 +68,7 @@
   --color-tech-colab: #e8a400;
   --color-tech-github: #24292e;
   --color-tech-linkedin: #0a66c2;
+  --color-tech-whatsapp: #25d366;
   --color-tech-mail: #ea4335;
   --color-tech-place: #ef4444;
 
@@ -1409,3 +1410,20 @@ figure { margin: 0; }
   background-color: color-mix(in srgb, var(--icon-color) 14%, transparent);
   border-bottom: var(--border-width) solid var(--color-border);
 }
+
+.project-card__caption {
+  padding: var(--space-2xs) var(--space-md);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  background-color: var(--color-surface);
+  border-bottom: var(--border-width) solid var(--color-border);
+}
+
+.hero__figcaption {
+  margin-top: var(--space-sm);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.icon--whatsapp { --icon-color: var(--color-tech-whatsapp); }

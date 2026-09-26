@@ -197,4 +197,4 @@ Babahoyo, Los Ríos — Ecuador
 
 - Correo: danioswal30@gmail.com
 - GitHub: [github.com/danilo323](https://github.com/danilo323)
-- LinkedIn: [linkedin.com/in/danilo](https://www.linkedin.com/in/danilo)
+- LinkedIn: [linkedin.com/in/oswaldo-danilo-angulo](https://www.linkedin.com/in/oswaldo-danilo-angulo-b00823311/)
