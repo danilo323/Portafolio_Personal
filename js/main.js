@@ -13,7 +13,7 @@ const PROJECTS = {
       "Agente explicativo que redacta en lenguaje natural por qué un caso fue marcado como riesgoso."
     ],
     tech: ["Python", "Machine Learning", "NLP", "Reglas de negocio"],
-    repo: "https://github.com/danilo323",
+    repo: "https://github.com/danilo323/Aseguradora-Del-Sur",
     demo: null
   },
   ecuatrade: {
@@ -30,7 +30,7 @@ const PROJECTS = {
       "Validadores personalizados del lado del servidor que rechazan existencias o precios negativos antes de tocar la base de datos."
     ],
     tech: ["Django", "Python", "PostgreSQL", "MVT"],
-    repo: "https://github.com/danilo323",
+    repo: "https://github.com/danilo323/EcuaTrade-System",
     demo: null
   },
   schedule: {
@@ -46,7 +46,7 @@ const PROJECTS = {
       "Interfaz frontend para capturar actividades académicas y personales y visualizar la rutina sugerida."
     ],
     tech: ["scikit-learn", "Pandas", "Joblib", "JavaScript"],
-    repo: "https://github.com/danilo323",
+    repo: "https://github.com/danilo323/AI-powered_routine_planner_system",
     demo: null
   }
 };
