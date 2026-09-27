@@ -165,19 +165,24 @@ python3 -m http.server 8000
 
 ## Capturas del Resultado
 
-A continuación se presenta el resultado final del desarrollo del portafolio interactivo, mostrando sus diferentes secciones, sistema de diseño y adaptación del tema visual:
+A continuación se presentan las capturas reales del sitio finalizado, demostrando las adaptaciones del diseño, componentes y los modos visuales:
 
-| Vista Inicial (Hero) | Sobre mí y Experiencia |
-|---|---|
-| ![Inicio](assets/img/captura-1.png) | ![Sobre mí](assets/img/captura-2.png) |
+### Inicio - Tema Claro
+![Inicio en Tema Claro](assets/img/tema_claro.png)
 
-| Habilidades Técnicas | Proyectos Destacados |
-|---|---|
-| ![Skills](assets/img/captura-3.png) | ![Proyectos](assets/img/captura-4.png) |
+### Inicio - Tema Oscuro
+![Inicio en Tema Oscuro](assets/img/tema_oscuro.png)
 
-| Detalle de Interfaz / Design System | Modo Oscuro / Componentes |
-|---|---|
-| ![Detalles de UI](assets/img/captura-5.png) | ![Modo Oscuro](assets/img/captura-6.png) |
+### Sección de Proyectos
+![Proyectos Destacados](assets/img/seccion_proyectos.png)
+
+### Design System y Componentes
+![Design System - Parte 1](assets/img/desig_system_1.png)
+<br>
+![Design System - Parte 2](assets/img/desig_system_2.png)
+
+### Adaptación Móvil (Responsive)
+![Diseño Responsive](assets/img/mode_responsive.png)
 
 ---
 
