@@ -163,17 +163,21 @@ python3 -m http.server 8000
 
 ---
 
-## Capturas
+## Capturas del Resultado
 
-> Reemplaza estas rutas por capturas reales del sitio ya publicado.
+A continuación se presenta el resultado final del desarrollo del portafolio interactivo, mostrando sus diferentes secciones, sistema de diseño y adaptación del tema visual:
 
-| Inicio (tema claro) | Inicio (tema oscuro) |
+| Vista Inicial (Hero) | Sobre mí y Experiencia |
 |---|---|
-| ![Inicio en tema claro](assets/img/captura-inicio-claro.png) | ![Inicio en tema oscuro](assets/img/captura-inicio-oscuro.png) |
+| ![Inicio](assets/img/captura-1.png) | ![Sobre mí](assets/img/captura-2.png) |
 
-| Proyectos | Design System |
+| Habilidades Técnicas | Proyectos Destacados |
 |---|---|
-| ![Sección de proyectos](assets/img/captura-proyectos.png) | ![Página de Design System](assets/img/captura-design-system.png) |
+| ![Skills](assets/img/captura-3.png) | ![Proyectos](assets/img/captura-4.png) |
+
+| Detalle de Interfaz / Design System | Modo Oscuro / Componentes |
+|---|---|
+| ![Detalles de UI](assets/img/captura-5.png) | ![Modo Oscuro](assets/img/captura-6.png) |
 
 ---
 
