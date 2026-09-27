@@ -182,7 +182,7 @@ A continuación se presentan las capturas reales del sitio finalizado, demostran
 ![Design System - Parte 2](assets/img/desig_system_2.png)
 
 ### Adaptación Móvil (Responsive)
-![Diseño Responsive](assets/img/mode_responsive.png)
+<img src="assets/img/mode_responsive.png" alt="Diseño Responsive" width="350">
 
 ---
 
